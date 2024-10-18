@@ -4,3 +4,11 @@ put 'tweets', 'ChennaiCityNow_2020-07-25 12:26:44', 'Users:user_description', 'H
 put 'tweets', 'ChennaiCityNow_2020-07-25 12:26:44', 'Users:user_description', 'Hello this is Second description'
 put 'tweets', 'ChennaiCityNow_2020-07-25 12:26:44', 'Users:user_description', 'Hello this is Third description'
 get 'tweets', 'ChennaiCityNow_2020-07-25 12:26:44', {COLUMNS => 'Users:user_description', VERSIONS => 3}
+
+###########################Versioning##############################
+alter 'Covid_19', {NAME => 'Users', VERSIONS => 3}
+put 'Covid_19', 'ChennaiCityNow_2020-07-25 12:26:44', 'Users:user_description', 'Hello this is first Description'
+put 'Covid_19', 'ChennaiCityNow_2020-07-25 12:26:44', 'Users:user_description', 'Hello this is Second description'
+put 'Covid_19', 'ChennaiCityNow_2020-07-25 12:26:44', 'Users:user_description', 'Hello this is Third description'
+get 'Covid_19', 'ChennaiCityNow_2020-07-25 12:26:44', {COLUMNS => 'Users:user_description', VERSIONS => 3}
+
