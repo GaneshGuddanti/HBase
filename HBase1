@@ -1,0 +1,5 @@
+alter 'tweets', {NAME => 'Users', VERSIONS => 3}
+put 'tweets', 'ChennaiCityNow_2020-07-25 12:26:44', 'Users:user_description', 'Hello this is first Description'
+put 'tweets', 'ChennaiCityNow_2020-07-25 12:26:44', 'Users:user_description', 'Hello this is Second description'
+put 'tweets', 'ChennaiCityNow_2020-07-25 12:26:44', 'Users:user_description', 'Hello this is Third description'
+get 'tweets', 'ChennaiCityNow_2020-07-25 12:26:44', {COLUMNS => 'Users:user_description', VERSIONS => 3}
