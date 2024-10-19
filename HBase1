@@ -12,3 +12,8 @@ put 'Covid_19', 'ChennaiCityNow_2020-07-25 12:26:44', 'Users:user_description', 
 put 'Covid_19', 'ChennaiCityNow_2020-07-25 12:26:44', 'Users:user_description', 'Hello this is Third description'
 get 'Covid_19', 'ChennaiCityNow_2020-07-25 12:26:44', {COLUMNS => 'Users:user_description', VERSIONS => 3}
 
+scan 'Covid_19', {COLUMNS => ['Tweets:text', 'Extras:source'], FILTER => "SingleColumnValueFilter('Tweets', 'text', =, 'substring:#COVID19') AND SingleColumnValueFilter('Extras', 'source', =, 'substring:Android')"}
+
+scan 'Covid_19', {COLUMNS => ['Tweets:hashtags', 'Extras:source'], FILTER => "SingleColumnValueFilter('Tweets', 'hashtags', =, 'substring:COVID19') AND SingleColumnValueFilter('Extras', 'source', =, 'substring:Android')"}
+
+scan 'Covid_19', {COLUMNS => ['Tweets:hashtags', 'Extras:source'], FILTER => "SingleColumnValueFilter('Tweets', 'hashtags', =, 'substring:COVID19') AND SingleColumnValueFilter('Extras', 'source', =, 'substring:Android')"}
